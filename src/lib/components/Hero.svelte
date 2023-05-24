@@ -1,12 +1,12 @@
 <script>
-  import { fade, fly } from "svelte/transition";
+  import { fade, fly, scale } from "svelte/transition";
   let visible = false;
   setTimeout(() => {
     visible = true;
   }, 800);
 </script>
 
-<section class="bg-gray-50 relative">
+<section class="bg-gray-50 relative -z-10">
   <div
     class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"
   >
@@ -26,20 +26,26 @@
           />
           <div
             class="absolute box border-2 w-[328px] h-48 top-20 left-6 border-gray-900 rounded-lg bg-emerald-300"
-            transition:fly={{ y: 50, duration: 900, delay: 1200 }}
+            transition:fly={{
+              y: 50,
+              duration: 900,
+              delay: 1200,
+            }}
           />
         </div>
       {/key}
     {/if}
 
     <div class="mx-auto max-w-xl text-center">
-      <h1 class="text-3xl font-extrabold sm:text-5xl text-sky-600">
+      <h1
+        class="text-3xl cursor-pointer font-extrabold sm:text-5xl text-sky-600 py-10"
+      >
         <span
-          class="md:border-2 border-gray-900 px-5 py-2 bg-sky-100 rounded-xl"
+          class="md:border-2 border-gray-900 md:px-5 md:py-2 md:bg-sky-100 rounded-xl shadow_class duration-150"
         >
           Bunny UI
         </span>
-        <strong class="font-extrabold text-gray-900 sm:block mt-4">
+        <strong class="font-extrabold text-gray-900 sm:block md:mt-10">
           Build Valuable Project
         </strong>
       </h1>
@@ -69,3 +75,12 @@
     </div>
   </div>
 </section>
+
+<style>
+  @media (min-width: 640px) {
+    .shadow_class {
+      transition: all 0.3s ease;
+      box-shadow: 5px 5px white, 7px 7px rgb(0, 16, 34);
+    }
+  }
+</style>
