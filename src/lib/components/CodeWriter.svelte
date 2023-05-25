@@ -13,9 +13,9 @@
     },
     { smdata: "< /script>", istrue: false, ispal: false },
     { smdata: " <main>", istrue: false, ispal: false },
-    { smdata: "    <Navbar />", istrue: false, ispal: true },
-    { smdata: "    <slot />", istrue: false, ispal: true },
-    { smdata: "    <Footer/>", istrue: false, ispal: true },
+    { smdata: "<Navbar />", istrue: false, ispal: true },
+    { smdata: "<slot />", istrue: false, ispal: true },
+    { smdata: "<Footer/>", istrue: false, ispal: true },
     { smdata: "< /main>", istrue: false, ispal: false },
   ];
   $: scr5 = scrData[5].istrue;
@@ -49,7 +49,7 @@
       </div>
       <div class="slot_content {scr6 === true ? 'active' : ''}">
         {@html scr6 === true
-          ? `Sikandar Bhide :  <span class="font-sans text-gray-900 pl-2">Juniour Fronted Developer</span>`
+          ? `Sikandar Bhide :  <span class="font-sans text-gray-900 pl-2">Juniour Frontend Developer</span>`
           : ""}
       </div>
       <div class="footer_content {scr7 === true ? 'active' : ''}">
@@ -77,7 +77,8 @@
   .header_content {
     width: 95%;
     height: 50px;
-    background: #686d73e0;
+    /* background: #2889ffe0; */
+    background: #69a9f8e0;
     border-radius: 10px;
     margin: 15px auto;
     border: 1px solid transparent;
@@ -91,7 +92,7 @@
   .slot_content {
     width: 95%;
     height: 100px;
-    background: #686d73e0;
+    background: #3efe9be0;
     border-radius: 10px;
     margin: 15px auto;
     border: 1px solid transparent;
@@ -105,16 +106,16 @@
   .footer_content {
     width: 95%;
     height: 50px;
-    background: #657282e0;
+    background: theme(colors.yellow.300);
     border-radius: 10px;
     margin: 15px auto;
     border: 1px solid transparent;
     transition: all 0.2s ease-in-out;
   }
   .active {
-    background: #17868e;
+    background: rgb(64, 193, 249);
     color: #ffffff;
-    border: 1px solid #ffffff;
+    border: 3px solid #ffffff;
     transition: all 0.2s ease-in-out;
     display: flex;
     justify-content: center;

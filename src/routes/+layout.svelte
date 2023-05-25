@@ -101,7 +101,7 @@
           <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
           <li tabindex="0">
             <!-- svelte-ignore a11y-missing-attribute -->
-            <a>
+            <a href={nav.link}>
               {nav.nv}
               <svg
                 class="fill-current"
