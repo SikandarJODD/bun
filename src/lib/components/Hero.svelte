@@ -6,7 +6,7 @@
   }, 800);
 </script>
 
-<section class="bg-gray-50 relative -z-10">
+<section class="bg-gray-50 relative">
   <div
     class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"
   >
@@ -57,9 +57,9 @@
         <strong class="text-gray-500">Just Copy Paste</strong> the Components.
       </p>
 
-      <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <div class="mt-20 flex flex-wrap justify-center gap-4 ">
         <a
-          class="block w-full rounded border-sky-500 border-2 text-gray-900 px-12 py-3 text-sm font-medium shadow hover:bg-sky-100 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+          class="block w-full rounded border-sky-500 border-2 text-gray-900 px-12 py-3 text-sm font-medium shadow hover:bg-sky-200 duration-100 sm:w-auto"
           href="/get-started"
         >
           Explore

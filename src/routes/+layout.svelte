@@ -55,7 +55,7 @@
 </script>
 
 <div
-  class="navbar bg-gray-900 border-b-2 border-slate-400 md:flex sticky top-0"
+  class="navbar bg-gray-900 border-b-2 border-slate-400 md:flex sticky top-0 z-10"
   id="nav_height"
 >
   <div class="navbar-start">
