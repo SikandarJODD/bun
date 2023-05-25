@@ -4,28 +4,34 @@
   setTimeout(() => {
     visible = true;
   }, 800);
+
+  let x = 0,
+    y = 0;
+  $: console.log(x);
 </script>
+
+<svelte:window bind:innerWidth={x} />
 
 <section class="bg-gray-50 relative">
   <div
     class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"
   >
-    {#if visible}
+    {#if visible && x >= 1220}
       {#key visible}
         <div
-          class="absolute hidden md:block border-2 w-1/4 left-10 h-3/5 border-gray-900 top-24 rounded-lg bg-yellow-300"
+          class="absolute hidden lg:block border-2 w-[25%] left-10 h-[60%] border-gray-900 top-24 rounded-lg bg-yellow-300"
           transition:fly={{ y: 200, duration: 800, delay: 500 }}
         >
           <div
-            class="absolute box border-2 w-3/4 h-10 top-5 left-6 border-gray-900 rounded-lg bg-blue-300"
+            class="absolute box border-2 w-[75%] h-10 top-5 left-6 border-gray-900 rounded-lg bg-blue-300"
             transition:fly={{ x: -50, duration: 500, delay: 800 }}
           />
           <div
-            class="absolute box border-2 w-10 h-10 top-5 left-[315px] border-gray-900 rounded-full bg-blue-300"
+            class="absolute box border-2 w-10 h-10 top-5 left-[85%] border-gray-900 rounded-full bg-blue-300"
             transition:fly={{ x: 50, duration: 500, delay: 800 }}
           />
           <div
-            class="absolute box border-2 w-[328px] h-48 top-20 left-6 border-gray-900 rounded-lg bg-emerald-300"
+            class="absolute box border-2 w-[86%] h-[70%] top-20 left-6 border-gray-900 rounded-lg bg-emerald-300"
             transition:fly={{
               y: 50,
               duration: 900,
@@ -57,7 +63,7 @@
         <strong class="text-gray-500">Just Copy Paste</strong> the Components.
       </p>
 
-      <div class="mt-20 flex flex-wrap justify-center gap-4 ">
+      <div class="mt-20 flex flex-wrap justify-center gap-4">
         <a
           class="block w-full rounded border-sky-500 border-2 text-gray-900 px-12 py-3 text-sm font-medium shadow hover:bg-sky-200 duration-100 sm:w-auto"
           href="/get-started"
