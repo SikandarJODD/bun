@@ -15,7 +15,7 @@
       {/each}
     </ul>
   </div>
-  <div class="div2 bg-gray-950">
+  <div class="div2 bg-gray-950 p-5">
     <slot />
   </div>
 </div>
