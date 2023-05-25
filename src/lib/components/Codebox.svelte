@@ -1,4 +1,9 @@
 <script>
+  import { copy } from "svelte-copy";
+  export let copyCode = "t";
+  import { fade, scale, fly } from "svelte/transition";
+  import CopyIcon from "$lib/imgs/copy.png";
+  import CheckIcon from "$lib/imgs/check.png";
   let scrData = [
     { smdata: "<script>", istrue: false, ispal: false },
     {
@@ -18,6 +23,8 @@
     { smdata: "<Footer/>", istrue: false, ispal: true },
     { smdata: "< /main>", istrue: false, ispal: false },
   ];
+  $: visible = false;
+  $: realIcon = CopyIcon;
 </script>
 
 <div class="flex flex-wrap flex-row">
@@ -39,7 +46,41 @@
       </div>
     {/each}
   </div> -->
-  <div class="box output_box"><slot /></div>
+  <div
+    class="box output_box relative"
+    on:mouseenter={() => (visible = true)}
+    on:mouseleave={() => (visible = false)}
+  >
+    <slot name="output" />
+    {#if visible}
+      {#key visible}
+        <div
+          class="icon_box absolute top-3 right-2 z-10"
+          transition:scale={{ duration: 300 }}
+        >
+          {#key realIcon}
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <img
+              src={realIcon}
+              alt="Copy - Code"
+              width="25"
+              class="active:scale-110 cursor-pointer duration-100 transition-all ease-out"
+              in:fly={{ x: -10, duration: 500 }}
+              on:click={() => {
+                copyCode = "Copied";
+                realIcon = CheckIcon;
+                setTimeout(() => {
+                  copyCode = "Copy";
+                  realIcon = CopyIcon;
+                }, 1500);
+              }}
+              use:copy={copyCode}
+            />
+          {/key}
+        </div>
+      {/key}
+    {/if}
+  </div>
 </div>
 
 <style lang="postcss">

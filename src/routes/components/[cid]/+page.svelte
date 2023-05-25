@@ -2,7 +2,7 @@
   import { count } from "./../../../store";
 
   import { page } from "$app/stores";
-  import Codebox from "../../../lib/components/Codebox.svelte";
+  import Codebox from "$lib/components/Codebox.svelte";
   $: RouteId = $page.params.cid;
   $: console.log(RouteId);
   $: data = $count[RouteId];
@@ -15,10 +15,12 @@
     <hr />
     <p>
       <!-- {JSON.stringify(codedesc)} -->
-      {#each codedesc as item,index}
-        <h2 class="text-2xl font-bold text-sky-300 pl-6 my-2">{index+1}. {item.title}</h2>
-        <Codebox >
-          {@html item.code}
+      {#each codedesc as item, index}
+        <h2 class="text-2xl font-bold text-sky-300 pl-6 my-2">
+          {index + 1}. {item.title}
+        </h2>
+        <Codebox copyCode={item.code}>
+          <span slot="output">{@html item.code}</span>
         </Codebox>
       {/each}
     </p>
