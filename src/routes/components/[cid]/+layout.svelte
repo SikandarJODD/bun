@@ -3,7 +3,7 @@
 </script>
 
 <div class="parent px-10 py-5">
-  <div class="div1">
+  <div class="div1 md:sticky md:top-20">
     <h1 class="font-bold text-2xl">Components</h1>
     <ul class="box mt-2 cursor-pointer">
       {#each contentData as content, index}
@@ -46,5 +46,24 @@
     border-radius: 10px;
     border: 1px solid #fff;
     grid-area: 1 / 2 / 6 / 6;
+  }
+  @media (max-width: 768px) {
+    .parent {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+
+    .div1 {
+      grid-area: 1 / 1 / 2 / 2;
+      height: fit-content;
+    }
+    .div2 {
+      grid-area: 2 / 1 / 7 / 2;
+      height: fit-content;
+      margin: 20px auto;
+    }
   }
 </style>

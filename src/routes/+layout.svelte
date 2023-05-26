@@ -55,7 +55,7 @@
 </script>
 
 <div
-  class="navbar bg-gray-900 border-b-2 border-slate-400 md:flex sticky top-0 z-10"
+  class="navbar bg-gradient-to-r from-gray-900 via-gray-800 to-sky-900 border-b-2 border-slate-400 md:flex sticky top-0 z-30"
   id="nav_height"
 >
   <div class="navbar-start">
@@ -80,7 +80,7 @@
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
       <ul
         tabindex="0"
-        class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+        class="  menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
       >
         <!-- Phone -->
         <li><a href="/">Home</a></li>

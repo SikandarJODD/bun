@@ -66,7 +66,7 @@
               src={realIcon}
               alt="Copy - Code"
               width="25"
-              class="active:scale-110 cursor-pointer transition-all ease-out"
+              class="  active:scale-110 cursor-pointer transition-all ease-out"
               in:fly={{ x: -10, duration: 500 }}
               on:click={() => {
                 copyCode = "Copied";
@@ -93,6 +93,11 @@
     border: 1px solid #fff;
     margin: 20px auto;
     box-shadow: 7px 7px theme(colors.gray.950), 8px 8px #18f9d4;
+  }
+  @media (max-width: 768px) {
+    .box {
+      width: 100%;
+    }
   }
   .output_box {
     /* background: #000a1a; */
