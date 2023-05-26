@@ -1,6 +1,7 @@
 <script>
   import { copy } from "svelte-copy";
   export let copyCode = "t";
+  export let bgcol;
   import { fade, scale, fly } from "svelte/transition";
   import CopyIcon from "$lib/imgs/copy.png";
   import CheckIcon from "$lib/imgs/check.png";
@@ -48,6 +49,7 @@
   </div> -->
   <div
     class="box output_box relative"
+    style="background: {bgcol}"
     on:mouseenter={() => (visible = true)}
     on:mouseleave={() => (visible = false)}
   >
@@ -55,7 +57,7 @@
     {#if visible}
       {#key visible}
         <div
-          class="icon_box absolute top-3 right-2 z-10"
+          class="icon_box absolute top-3 right-3 z-10"
           transition:scale={{ duration: 300 }}
         >
           {#key realIcon}
@@ -64,7 +66,7 @@
               src={realIcon}
               alt="Copy - Code"
               width="25"
-              class="active:scale-110 cursor-pointer  transition-all ease-out"
+              class="active:scale-110 cursor-pointer transition-all ease-out"
               in:fly={{ x: -10, duration: 500 }}
               on:click={() => {
                 copyCode = "Copied";
@@ -94,7 +96,7 @@
   }
   .output_box {
     /* background: #000a1a; */
-    background: #021534;
+    /* background: #021534; */
     border-radius: 10px;
     display: flex;
     justify-content: center;
