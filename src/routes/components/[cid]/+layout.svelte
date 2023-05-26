@@ -2,7 +2,7 @@
   let contentData = ["Footer", "Header", "Main", "Nav", "Section"];
 </script>
 
-<div class="parent px-10 py-5">
+<div class="parent px-5 py-5 md:px-10 md:py-5">
   <div class="div1 md:sticky md:top-20">
     <h1 class="font-bold text-2xl">Components</h1>
     <ul class="box mt-2 cursor-pointer">
