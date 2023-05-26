@@ -14,7 +14,7 @@
     { smdata: "< /script>", istrue: false, ispal: false },
     { smdata: " <main>", istrue: false, ispal: false },
     { smdata: "<Navbar />", istrue: false, ispal: true },
-    { smdata: "<slot />", istrue: false, ispal: true },
+    { smdata: "<slot />", istrue: true, ispal: true },
     { smdata: "<Footer/>", istrue: false, ispal: true },
     { smdata: "< /main>", istrue: false, ispal: false },
   ];
@@ -29,7 +29,9 @@
       <div
         on:mouseenter={() => (item.istrue = true)}
         on:mouseleave={() => (item.istrue = false)}
-        class="hover:bg-base-100 rounded-md px-2 {item.ispal === true
+        class="hover:bg-base-100 {item.istrue === true
+          ? 'bg-base-100'
+          : ''}  rounded-md px-2 {item.ispal === true
           ? 'hover:text-sky-500'
           : ''} "
       >
@@ -48,9 +50,7 @@
         {scr5 === true ? "Navbar " : ""}
       </div>
       <div class="slot_content {scr6 === true ? 'active' : ''}">
-        {@html scr6 === true
-          ? `Sikandar Bhide :  <span class="font-sans text-gray-900 pl-2">Juniour Frontend Developer</span>`
-          : ""}
+        {@html scr6 === true ? `Sikandar Bhide ` : ""}
       </div>
       <div class="footer_content {scr7 === true ? 'active' : ''}">
         {@html scr7 === true ? "Footer" : ""}
@@ -61,11 +61,16 @@
 
 <style lang="postcss">
   .box {
-    width: 43%;
+    width: 40%;
     margin: 70px auto;
-    padding: 20px 19px;
+    padding: 20px 23px;
     border: 1px solid #ffffff;
     box-shadow: 7px 7px theme(colors.gray.900), 8px 8px #1fbcfa;
+  }
+  @media (max-width: 768px) {
+    .box {
+      width: 85%;
+    }
   }
   .sm_box {
     width: 100%;
