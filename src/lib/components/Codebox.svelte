@@ -66,7 +66,7 @@
               src={realIcon}
               alt="Copy - Code"
               width="25"
-              class="  active:scale-110 cursor-pointer transition-all ease-out"
+              class= "   active:scale-110 cursor-pointer transition-all ease-out"
               in:fly={{ x: -10, duration: 500 }}
               on:click={() => {
                 copyCode = "Copied";

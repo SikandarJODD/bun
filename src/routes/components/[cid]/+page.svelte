@@ -10,13 +10,15 @@
 </script>
 
 <main>
-  <div class="box">
+  <div class="box ">
     <h1 class="text-2xl md:text-3xl font-bold mb-2">{data.title} Component</h1>
     <hr />
     <p>
       <!-- {JSON.stringify(codedesc)} -->
       {#each codedesc as item, index}
-        <h2 class="text-center md:text-left text-2xl font-bold text-sky-300 pl-6 my-2">
+        <h2
+          class="text-center md:text-left text-2xl font-bold text-sky-300 pl-6 my-2"
+        >
           {index + 1}. {item.title}
         </h2>
         <Codebox copyCode={item.code} bgcol={item.bg}>
@@ -26,3 +28,4 @@
     </p>
   </div>
 </main>
+

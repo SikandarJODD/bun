@@ -37,10 +37,7 @@
     border-radius: 14px;
     border: 1px solid #fff;
   }
-  .box {
-    display: flex;
-    flex-direction: column;
-  }
+
   .div2 {
     margin: 0px 30px;
     border-radius: 10px;
@@ -63,6 +60,7 @@
     .div2 {
       grid-area: 2 / 1 / 7 / 2;
       height: fit-content;
+      width: 100%;
       margin: 20px auto;
     }
   }
