@@ -83,6 +83,8 @@
     .div1 {
       grid-area: 1 / 1 / 2 / 2;
       height: fit-content;
+      width: 100%;
+      margin: 0px auto;
     }
     .div2 {
       grid-area: 2 / 1 / 7 / 2;

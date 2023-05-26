@@ -19,7 +19,7 @@
         <h2
           class="text-center md:text-left text-2xl font-bold text-sky-300 pl-6 my-2"
         >
-          {index + 1}. {item.title}
+          {index + 1}. {@html item.title}
         </h2>
         <Codebox copyCode={item.code} bgcol={item.bg}>
           <span slot="output">{@html item.code}</span>

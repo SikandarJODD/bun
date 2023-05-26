@@ -115,7 +115,7 @@
               >
             </a>
             <ul>
-              <div class=" flex flex-row mt-4 bg-base-200 p-2 rounded-xl border-2">
+              <div class=" flex flex-row mt-4 bg-base-200 p-2 rounded-xl border-2 ">
                 <ul class="p-2 bg-base-200">
                   {#each nav.smallnvs as smallnv}
                     <li><a href={smallnv.link} class="p-3 hover:text-sky-500">{smallnv.nv}</a></li>
