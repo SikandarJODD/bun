@@ -1,5 +1,30 @@
 <script>
-  let contentData = ["Footer", "Header", "Main", "Nav", "Section"];
+  let contentData = [
+    {
+      name: "Navbar",
+      path: "/components/navbar",
+    },
+    {
+      name: "Buttons",
+      path: "/components/buttons",
+    },
+    {
+      name: "Footer",
+      path: "/components/footer",
+    },
+    {
+      name: "Hero",
+      path: "/components/hero",
+    },
+    {
+      name: "Grids",
+      path: "/components/grids",
+    },
+    {
+      name: "Cards",
+      path: "/components/cards",
+    },
+  ];
 </script>
 
 <div class="parent px-5 py-5 md:px-10 md:py-5">
@@ -10,7 +35,9 @@
         <li
           class=" m-[6px] rounded-md hover:text-sky-500 hover:bg-base-100 px-3 py-[2px]"
         >
-          {index + 1}. <span>{content}</span>
+          <a href={content.path}>
+            {index + 1}. <span>{content.name}</span>
+          </a>
         </li>
       {/each}
     </ul>

@@ -19,11 +19,11 @@
         smallnvs: [
           {
             nv: "Button",
-            link: "/components/button",
+            link: "/components/buttons",
           },
           {
             nv: "Card",
-            link: "/components/card",
+            link: "/components/cards",
           },
           {
             nv: "Navbars",
@@ -31,7 +31,7 @@
           },
           {
             nv: "Grid Based",
-            link: "/components/grid-based",
+            link: "/components/grids",
           },
         ],
         smallnvs2: [
@@ -55,7 +55,7 @@
 </script>
 
 <div
-  class="navbar bg-gradient-to-r from-gray-900 via-gray-800 to-sky-900 border-b-2 border-slate-400 md:flex sticky top-0 z-30"
+  class="navbar bg-gradient-to-r from-gray-900 via-gray-800 to-sky-800 border-b-2 border-slate-400 md:flex sticky top-0 z-30"
   id="nav_height"
 >
   <div class="navbar-start">

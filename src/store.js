@@ -1,7 +1,7 @@
 import { writable } from "svelte/store";
 
 export const count = writable({
-    button: {
+    buttons: {
         title: "Button",
         codedesc: [
             {
@@ -34,7 +34,7 @@ export const count = writable({
 
         ]
     },
-    card: {
+    cards: {
         title: "Cards",
         codedesc: [
             {

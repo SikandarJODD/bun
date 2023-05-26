@@ -46,13 +46,25 @@
   </div>
   <div class="box">
     <div class="sm_box">
-      <div class="header_content duration-100 {scr5 === true ? 'active' : ''} ">
+      <div
+        class="header_content duration-100 {scr5 === true ? 'active' : ''} "
+        on:mouseenter={() => (scrData[5].istrue = true)}
+        on:mouseleave={() => (scrData[5].istrue = false)}
+      >
         {scr5 === true ? "Navbar " : ""}
       </div>
-      <div class="slot_content {scr6 === true ? 'active' : ''}">
+      <div
+        class="slot_content {scr6 === true ? 'active' : ''}"
+        on:mouseenter={() => (scrData[6].istrue = true)}
+        on:mouseleave={() => (scrData[6].istrue = false)}
+      >
         {@html scr6 === true ? `Sikandar Bhide ` : ""}
       </div>
-      <div class="footer_content {scr7 === true ? 'active' : ''}">
+      <div
+        class="footer_content {scr7 === true ? 'active' : ''}"
+        on:mouseenter={() => (scrData[7].istrue = true)}
+        on:mouseleave={() => (scrData[7].istrue = false)}
+      >
         {@html scr7 === true ? "Footer" : ""}
       </div>
     </div>
