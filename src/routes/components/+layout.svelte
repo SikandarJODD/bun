@@ -2,7 +2,7 @@
   let contentData = [
     {
       name: "Navbar",
-      path: "/components/navbar",
+      path: "/components/navbars",
     },
     {
       name: "Buttons",

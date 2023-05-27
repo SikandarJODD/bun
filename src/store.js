@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-
+import Navbar from "./lib/components/Navabr.svelte";
 export const count = writable({
     buttons: {
         title: "Button",
@@ -123,20 +123,6 @@ export const count = writable({
             }
         ]
     },
-    navbar: {
-        title: "Navbar",
-        codedesc: [
-            {
-                title: "Simple Navbar",
-                code: `<button class="btn btn-primary">Primary</button>`,
-                output: `<button class="btn btn-primary">Primary</button>`
-
-            }, {
-                title: "Secondary button",
-                code: `<button class="btn btn-secondary">Secondary</button>`,
-                output: `<button class="btn btn-primary">Primary</button>`
-            }
-        ]
-    },
+   
 
 });
