@@ -26,6 +26,7 @@
   ];
   $: visible = false;
   $: realIcon = CopyIcon;
+  // style="background: {bgcol} "
 </script>
 
 <div class="flex flex-wrap flex-row">
@@ -48,12 +49,14 @@
     {/each}
   </div> -->
   <div
-    class="box output_box relative"
-    style="background: {bgcol}"
+    class="box output_box relative "
+    style="background: {bgcol} "
     on:mouseenter={() => (visible = true)}
     on:mouseleave={() => (visible = false)}
   >
-    <slot name="output" />
+    <div>
+      <slot name="output" />
+    </div>
     {#if visible}
       {#key visible}
         <div
@@ -90,7 +93,17 @@
     /* padding: 50px 50px; */
     border: 1px solid #fff;
     margin: 20px auto;
-    box-shadow: 7px 7px theme(colors.gray.950), 8px 8px #18f9d4;
+    /* box-shadow: 7px 7px theme(colors.gray.950), 8px 8px #18f9d4; */
+    /* background: rgba(18, 38, 83, 0.538); */
+    background: linear-gradient(
+      -35deg,
+      rgba(23, 45, 97, 0.681) 0%,
+      rgba(8, 28, 61, 0.54) 100%
+    );
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    /* background: rgba(13, 31, 73, 0.538); */
+    /* filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25)); */
+    
   }
   @media only screen and (max-width: 480px) {
     .box {

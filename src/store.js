@@ -1,21 +1,21 @@
 import { writable } from "svelte/store";
 import Navbar from "./lib/components/Navabr.svelte";
 export const count = writable({
-    buttons: {
-        title: "Button",
-        codedesc: [
-            {
-                title: "Classic button",
-                bg: "#b8fffe",
-                code: `
+  buttons: {
+    title: "Button",
+    codedesc: [
+      {
+        title: "Classic button",
+        bg: "#b8fffe",
+        code: `
                 <button  style="padding:10px;margin:0px;border:2px solid #000;border-radius:5px;background-color:#fff;color:#000;font-size:20px;box-shadow:4px 4px 0px #000a19;">Submit</button>
                 `,
 
-            },
-            {
-                title: "Primary button",
-                bg: "#b8fffe",
-                code: `<button class="btnx basic">Download </button>  
+      },
+      {
+        title: "Primary button",
+        bg: "#b8fffe",
+        code: `<button class="btnx basic">Download </button>  
                 <style>
                     .btnx {
                         padding: 10px;
@@ -44,11 +44,11 @@ export const count = writable({
                     }
                 </style>`,
 
-            },
-            {
-                title: "Secondary button",
-                bg: "#b8fffe",
-                code: `<button class="btnx sv_animate">Download </button>  
+      },
+      {
+        title: "Secondary button",
+        bg: "#b8fffe",
+        code: `<button class="btnx sv_animate">Download </button>  
                 <style>
                     .btnx {
                         padding: 10px;
@@ -77,21 +77,21 @@ export const count = writable({
                     }
                 </style>`,
 
-            },
-            {
-                title: `Tertiary button  <span class="badge badge-primary badge-outline p-3 mx-1" > daisyUI </span>  <span class="badge badge-primary badge-outline p-3 mx-1" > Tailwind CSS </span> `,
-                bg: "#021534",
-                code: `<button class="btn btn-outline hover:bg-sky-500">Cool Stuff </button>`,
-            }
+      },
+      {
+        title: `Tertiary button  <span class="badge badge-primary badge-outline p-3 mx-1" > daisyUI </span>  <span class="badge badge-primary badge-outline p-3 mx-1" > Tailwind CSS </span> `,
+        code: `<button class="btn btn-outline hover:bg-sky-500">Cool Stuff </button>`,
+        bg: "#021534",
+      }
 
-        ]
-    },
-    cards: {
-        title: "Cards",
-        codedesc: [
-            {
-                title: `Simple Card <span class="badge badge-primary badge-outline p-3 mx-1" > daisyUI </span>  <span class="badge badge-primary badge-outline p-3 mx-1" > Tailwind CSS </span>`,
-                code: `<div class="card  
+    ]
+  },
+  cards: {
+    title: "Cards",
+    codedesc: [
+      {
+        title: `Simple Card <span class="badge badge-primary badge-outline p-3 mx-1" > daisyUI </span>  <span class="badge badge-primary badge-outline p-3 mx-1" > Tailwind CSS </span>`,
+        code: `<div class="card  
                  card-side bg-base-100 shadow-xl group transition-all duration-100 border flex flex-col md:flex-row">
                 <figure><img src="https://i.pinimg.com/564x/58/cf/ee/58cfee91db3873880fd5a183ff3a24af.jpg" class="w-full md:w-56 rounded-t-2xl md:rounded-t-none rounded-r-2xl md:rounded-r-none  " alt="Movie"/></figure>
                 <div class="card-body group-hover:bg-base-200 rounded-r-2xl rounded-l-2xl transition-all duration-100">
@@ -107,9 +107,9 @@ export const count = writable({
                 </div>
               </div>`,
 
-            }, {
-                title: `Secondary button <span class="badge badge-primary badge-outline p-3 mx-1" > daisyUI </span>  <span class="badge badge-primary badge-outline p-3 mx-1" > Tailwind CSS </span>`,
-                code: `<div class="card md:w-96  bg-base-100 transition-all duration-100 
+      }, {
+        title: `Secondary button <span class="badge badge-primary badge-outline p-3 mx-1" > daisyUI </span>  <span class="badge badge-primary badge-outline p-3 mx-1" > Tailwind CSS </span>`,
+        code: `<div class="card md:w-96  bg-base-100 transition-all duration-100 
               shadow-xl group">
                 <figure><img src="https://i.pinimg.com/564x/70/0e/7f/700e7ff79fa9f3d94ea5fb2ea1e18182.jpg" alt="Shoes"  /></figure>
                 <div class="card-body group-hover:border-sky-500 border-b-2 border-l-2 border-r-2 rounded-b-xl">
@@ -120,9 +120,9 @@ export const count = writable({
                   </div>
                 </div>
               </div>`,
-            }
-        ]
-    },
-   
+      }
+    ]
+  },
+
 
 });

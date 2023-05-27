@@ -1,4 +1,5 @@
 <script>
+  
   import Navabr from "$lib/components/Navabr.svelte";
 </script>
 
