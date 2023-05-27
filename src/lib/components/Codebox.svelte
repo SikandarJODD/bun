@@ -97,8 +97,8 @@
       border: 1px solid #fff;
       box-shadow: none !important;
       padding: 45px 20px;
-      /* width: 99%; */
-      /* min-height: 30px; */
+      width: 100%;
+      min-height: 190px;
       /* max-height: 600px; */
     }
   }
