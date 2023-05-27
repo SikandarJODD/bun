@@ -91,11 +91,12 @@ export const count = writable({
         codedesc: [
             {
                 title: `Simple Card <span class="badge badge-primary badge-outline p-3 mx-1" > daisyUI </span>  <span class="badge badge-primary badge-outline p-3 mx-1" > Tailwind CSS </span>`,
-                code: `<div class="card w-[95%] md:w-full card-side bg-base-100 shadow-xl group transition-all duration-100 border flex flex-col md:flex-row">
+                code: `<div class="card  
+                 card-side bg-base-100 shadow-xl group transition-all duration-100 border flex flex-col md:flex-row">
                 <figure><img src="https://i.pinimg.com/564x/58/cf/ee/58cfee91db3873880fd5a183ff3a24af.jpg" class="w-full md:w-56 rounded-t-2xl md:rounded-t-none rounded-r-2xl md:rounded-r-none  " alt="Movie"/></figure>
-                <div class="card-body group-hover:bg-base-200 rounded-r-2xl transition-all duration-100">
+                <div class="card-body group-hover:bg-base-200 rounded-r-2xl rounded-l-2xl transition-all duration-100">
                
-                  <h2 class="card-title transition-all duration-100 group-hover:text-sky-500 md:text-2xl ">Aesthetics UI Card</h2>
+                  <h2 class="card-title transition-all duration-100 group-hover:text-sky-500 md:text-3xl text-2xl font-bold">Aesthetics UI Card</h2>
                   <div>
                   <span class="badge badge-primary badge-outline p-3  group-hover:bg-primary group-hover:text-gray-900" > daisyUI </span>  <span class="badge badge-primary badge-outline p-3 mx-1 group-hover:bg-primary group-hover:text-gray-900" > Tailwind CSS </span>
                   </div>
@@ -108,11 +109,11 @@ export const count = writable({
 
             }, {
                 title: `Secondary button <span class="badge badge-primary badge-outline p-3 mx-1" > daisyUI </span>  <span class="badge badge-primary badge-outline p-3 mx-1" > Tailwind CSS </span>`,
-                code: `<div class="card w-[95%] md:w-96  bg-base-100 transition-all duration-100 
+                code: `<div class="card md:w-96  bg-base-100 transition-all duration-100 
               shadow-xl group">
                 <figure><img src="https://i.pinimg.com/564x/70/0e/7f/700e7ff79fa9f3d94ea5fb2ea1e18182.jpg" alt="Shoes"  /></figure>
                 <div class="card-body group-hover:border-sky-500 border-b-2 border-l-2 border-r-2 rounded-b-xl">
-                  <h2 class="card-title group-hover:text-sky-400 font-bold md:text-3xl text-xl">Title of Card</h2>
+                  <h2 class="card-title group-hover:text-sky-400 font-bold md:text-3xl text-2xl">Title of Card</h2>
                   <p>Hover over Card to See the Change. Your Welcome </p>
                   <div class="card-actions justify-end">
                     <button class="btn btn-primary btn-outline group-hover:bg-primary group-hover:text-gray-900 ">Buy Now</button>

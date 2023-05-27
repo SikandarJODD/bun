@@ -90,25 +90,25 @@
     /* padding: 50px 50px; */
     border: 1px solid #fff;
     margin: 20px auto;
-    /* box-shadow: 7px 7px theme(colors.gray.950), 8px 8px #18f9d4; */
+    box-shadow: 7px 7px theme(colors.gray.950), 8px 8px #18f9d4;
   }
-  @media (max-width: 768px) {
+  @media only screen and (max-width: 480px) {
     .box {
+      border: 1px solid #fff;
       box-shadow: none !important;
-      border: none;
-      padding: 0px;
-      margin: 20px auto;
-      /* width: 330px; */
+      padding: 45px 20px;
+      /* width: 99%; */
+      /* min-height: 30px; */
+      /* max-height: 600px; */
     }
   }
-  @media (min-width: 769px) and (max-width: 1540px) {
+  @media only screen and (min-width: 769px) and (max-width: 1540px) {
     .box {
       padding: 50px;
-      min-width: 35%;
-      visibility: visible;
-      max-width: 98%;
-      min-height: 200px;
-      max-height: 550px;
+      min-width: 43%;
+      max-width: 100%;
+      min-height: 250px;
+      max-height: 570px;
     }
   }
   .output_box {
