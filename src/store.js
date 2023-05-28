@@ -184,8 +184,9 @@ export const dvnvs = writable({
       </ul>
     </div>
   </div>
+  </slot>
   `,
-  nv2: `<script>
+  nv2: `<scrip>
   import { page } from "$app/stores";
   $: console.log($page);
   $: pathN = $page.route.id;
@@ -266,5 +267,6 @@ export const dvnvs = writable({
     </a>
   {/each}
 </div>
+</slot>
 `
 })
