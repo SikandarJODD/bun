@@ -42,7 +42,7 @@
       {/each}
     </ul>
   </div>
-  <div class="div2  bg-gradient-to-r from-[#020921] to-[#030F36]  md:shadow-2xl md:shadow-gray-900 p-5">
+  <div class="div2  bg-slate-950  md:shadow-2xl md:shadow-gray-900 p-5">
     <slot />
   </div>
 </div>
