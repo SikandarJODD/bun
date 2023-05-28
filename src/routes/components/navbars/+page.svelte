@@ -15,7 +15,7 @@
     {
       title: "Simple Navabr with Bottom Navigation",
       component: Navbar2,
-      code: `pop`,
+      code: $dvnvs.nv2,
       copyText: "Copy Code",
     },
   ];
