@@ -1,20 +1,21 @@
 <script>
   import CodeWriter from "../lib/components/CodeWriter.svelte";
   import Hero from "../lib/components/Hero.svelte";
-  // import logo from "../lib/assets/logo.svg";
-  import logo from "$lib/logo.png";
+  import Logo from "$lib/logo.png";
+  import { page } from "$app/stores";
+  import { Head } from "svead";
+
+  let title = "Home | BunnyUI";
+  let image = `https://github.com/SikandarJODD/bun/blob/master/logo.png?raw=true`;
+  let description =
+    "Build website using SvelteKit and TailwindCSS with BunnyUI components.";
+  let url = $page.url.toString();
 </script>
 
 <svelte:head>
-  <title>Home Page</title>
-  <link rel="shortcut icon" href={logo} type="image/x-icon" />
-  <meta
-    name="og:image"
-    content="https://img.freepik.com/premium-vector/project-prototype-management_442409-604.jpg?w=740"
-  />
-  <meta name="og:title" content="Home Page | Bunny UI" />
-  <meta name="description" content="Copy Paste Components" />
+  <link rel="shortcut icon" href={Logo} type="image/x-icon" />
 </svelte:head>
+<Head {title} {description} {image} {url} />
 <Hero />
 <CodeWriter />
 <div />
