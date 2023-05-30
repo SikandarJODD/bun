@@ -6,7 +6,7 @@
   import { Head } from "svead";
 
   let title = "Home | BunnyUI";
-  let image = `https://github.com/SikandarJODD/bun/blob/master/logo.png?raw=true`;
+  let image = `https://img.freepik.com/premium-vector/website-development-abstract-concept-vector-illustration_107173-25077.jpg?w=200`;
   let description =
     "Build website using SvelteKit and TailwindCSS with BunnyUI components.";
   let url = $page.url.toString();
