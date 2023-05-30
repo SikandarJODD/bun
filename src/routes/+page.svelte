@@ -8,7 +8,7 @@
 <svelte:head>
   <title>Home Page</title>
   <link rel="shortcut icon" href={logo} type="image/x-icon" />
-  <link rel="shortcut icon" href="../../lib/logo.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="%sveltekit.assets%/logo.png" type="image/x-icon" />
   <meta name="og:image" content={logo} />
   <meta name="og:title" content="Home Page | Bunny UI" />
   <meta name="description" content="Copy Paste Components" />
