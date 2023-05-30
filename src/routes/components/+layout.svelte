@@ -24,6 +24,10 @@
       name: "Cards",
       path: "/components/cards",
     },
+    {
+      name: `Cards <span class="font-semibold badge badge-primary badge-outline ml-2 p-2 group-hover:bg-gray-950" >Tailwind CSS</span>`,
+      path: "/components/tcards",
+    },
   ];
 </script>
 
@@ -33,10 +37,10 @@
     <ul class="box mt-2 cursor-pointer">
       {#each contentData as content, index}
         <li
-          class=" m-[6px] rounded-md hover:text-sky-500 hover:bg-base-100 px-3 py-[2px]"
+          class=" m-[6px] rounded-md hover:text-sky-500 hover:bg-base-100 px-3 py-[2px] group"
         >
           <a href={content.path}>
-            {index + 1}. <span>{content.name}</span>
+            {index + 1}. <span>{@html content.name}</span>
           </a>
         </li>
       {/each}

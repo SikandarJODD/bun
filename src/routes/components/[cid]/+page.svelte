@@ -17,7 +17,7 @@
       <!-- {JSON.stringify(codedesc)} -->
       {#each codedesc as item, index}
         <h2
-          class="text-center md:text-left text-xl md:text-2xl font-bold text-sky-300 pl-6 my-2"
+          class="text-center md:text-left text-xl md:text-2xl font-bold text-sky-300 pl-6 my-2 capitalize"
         >
           {index + 1}. {@html item.title}
         </h2>
