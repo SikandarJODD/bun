@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href={logo} type="image/x-icon" />
   <meta
     name="og:image"
-    content="https://raw.githubusercontent.com/SikandarJODD/bun/master/logo.png"
+    content="https://img.freepik.com/premium-vector/project-prototype-management_442409-604.jpg?w=740"
   />
   <meta name="og:title" content="Home Page | Bunny UI" />
   <meta name="description" content="Copy Paste Components" />
