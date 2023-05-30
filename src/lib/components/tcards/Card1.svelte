@@ -1,14 +1,46 @@
+<script>
+  import { fade, fly, scale } from "svelte/transition";
+  let cdata = [
+    {
+      ctitle: "Rome",
+      subtitle: "Italy",
+      img: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1592&q=80",
+    },
+    {
+      ctitle: "Delhi",
+      subtitle: "India",
+      img: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+    },
+    {
+      ctitle: "Paris",
+      subtitle: "France",
+      img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80",
+    },
+  ];
+  let i = 0;
+  setInterval(() => {
+    i++;
+    if (i == cdata.length) {
+      i = 0;
+    }
+  }, 2000);
+</script>
+
 <a
-  href="#"
-  class="relative block overflow-hidden rounded-xl bg-[url(https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1592&q=80)] bg-cover bg-center bg-no-repeat w-80 md:w-96 h-52 md:h-64"
+  href="/"
+  class="relative block overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat w-80 md:w-96 h-52 md:h-64 shadow-gray-600 shadow-md"
+  style="background-image: url({cdata[i].img});"
 >
-  <div class="absolute inset-0 bg-black/25"></div>
+  <div class="absolute inset-0 bg-black/25" />
 
   <div class="relative flex items-start justify-between p-4 sm:p-6 lg:p-8">
     <div class="sm:pt-18 pt-32 text-white lg:pt-40">
-      <h3 class="text-xl font-bold sm:text-2xl">Rome</h3>
-
-      <p class="text-sm">Italy</p>
+      {#key i}
+        <h3 in:scale class="text-xl font-bold sm:text-2xl">{cdata[i].ctitle}</h3>
+      {/key}
+      {#key i}
+        <p class="text-sm" in:fade>{cdata[i].subtitle}</p>
+      {/key}
     </div>
 
     <span

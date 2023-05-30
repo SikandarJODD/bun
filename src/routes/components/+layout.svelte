@@ -25,8 +25,8 @@
       path: "/components/cards",
     },
     {
-      name: `Cards <span class="font-semibold badge badge-primary badge-outline ml-2 p-2 group-hover:bg-gray-950" >Tailwind CSS</span>`,
-      path: "/components/tcards",
+      name: `Carousel <span class="font-semibold badge badge-primary badge-outline ml-2 p-2 group-hover:bg-gray-950" >Tailwind CSS</span>`,
+      path: "/components/carousel",
     },
   ];
 </script>
