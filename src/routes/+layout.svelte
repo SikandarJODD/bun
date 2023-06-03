@@ -80,7 +80,7 @@
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
       <ul
         tabindex="0"
-        class="  menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+        class="  menu menu-compact dropdown-content mt-6 p-2 shadow bg-base-100 rounded-box w-52"
       >
         <!-- Phone -->
         <li><a href="/">Home</a></li>

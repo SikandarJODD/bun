@@ -11,6 +11,7 @@
     "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/kit": "^1.5.0",
     "autoprefixer": "^10.4.14",
+    "daisyui": "^3.0.1",
     "postcss": "^8.4.23",
     "postcss-load-config": "^4.0.1",
     "svead": "^0.0.4",
@@ -21,7 +22,6 @@
   },
   "type": "module",
   "dependencies": {
-    "daisyui": "^2.51.6",
     "svelte-copy": "^1.3.2"
   }
 }

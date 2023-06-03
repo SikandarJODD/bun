@@ -9,14 +9,6 @@
       path: "/components/buttons",
     },
     {
-      name: "Footer",
-      path: "/components/footer",
-    },
-    {
-      name: "Hero",
-      path: "/components/hero",
-    },
-    {
       name: "Grids",
       path: "/components/grids",
     },
