@@ -1,6 +1,6 @@
 <script>
   import "../app.css";
-  import Logo from "../logo.png";
+  import Logo from "$lib/logo.png";
   import { page } from "$app/stores";
   $: RouteId = $page.route.id;
   let data = {
@@ -57,7 +57,7 @@
       },
     ],
   };
-  let mint = true;
+  let mint = false;
 </script>
 
 <div
@@ -66,6 +66,8 @@
 >
   <div class="navbar-start">
     <div class="dropdown">
+      <!-- svelte-ignore a11y-label-has-associated-control -->
+      <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
       <label tabindex="0" class="btn btn-ghost lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -81,11 +83,12 @@
           /></svg
         >
       </label>
+      <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
       <ul
         tabindex="0"
-        class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+        class="menu menu-sm dropdown-content mt-3 p-2 shadow  bg-sky-950 z-20 border-2 rounded-box w-52"
       >
-        <li><a>Item 1</a></li>
+        <!-- <li><a>Item 1</a></li>
         <li>
           <a>Parent</a>
           <ul class="p-2">
@@ -93,20 +96,27 @@
             <li><a>Submenu 2</a></li>
           </ul>
         </li>
-        <li><a>Item 3</a></li>
+        <li><a>Item 3</a></li> -->
+        {#each data.navs as item}
+          <li><a href={item.link} class=" font-semibold">{item.nv}</a></li>
+        {/each}
       </ul>
     </div>
-    <a class="btn btn-ghost normal-case text-xl text-sky-400 font-bold"
-      >{data.title}</a
-    >
+    <div class="flex items-center">
+      <a class="btn btn-ghost normal-case text-xl text-sky-400 font-bold" href="/">
+        <img src={Logo} class="w-10" alt="code" />
+        {data.title}</a
+      >
+    </div>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1 z-20">
       {#each data.navs as item}
         {#if item.isLarge}
+          <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
           <li tabindex="0">
             <details bind:open={mint}>
-              <summary>{item.nv}</summary>
+              <summary><a href={item.link}>{item.nv}</a></summary>
               <ul class="p-2 border-2 bg_col">
                 {#each item.smallnvs as snv}
                   <li>
@@ -136,7 +146,7 @@
 
 <style lang="postcss">
   .bg_col {
-    background: #022e4bc8;
+    background: #022e4bdd;
   }
   ul > li {
     font-size: 1rem;
