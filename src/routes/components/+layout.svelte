@@ -38,7 +38,7 @@
       {/each}
     </ul>
   </div>
-  <div class="div2  bg-slate-950  md:shadow-2xl md:shadow-gray-900 p-5">
+  <div class="div2  bg-gray-900  md:shadow-2xl md:shadow-gray-900 p-5">
     <slot />
   </div>
 </div>
@@ -56,7 +56,7 @@
     padding: 10px 15px;
     height: 85vh;
     grid-area: 1 / 1 / 6 / 2;
-    background-color: #000a1a;
+    background-color: #02122c;
     border-radius: 14px;
     border: 1px solid #fff;
   }

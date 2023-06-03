@@ -46,22 +46,26 @@
         ],
       },
       {
+        nv: "Custom",
+        link: "/custom",
+        isLarge: false,
+      },
+      {
         nv: "About Us",
         link: "/about",
         isLarge: false,
       },
     ],
   };
+  let mint = true;
 </script>
 
 <div
-  class="navbar bg-gradient-to-r from-gray-900 via-gray-800 to-sky-800 border-b-2 border-slate-400 md:flex sticky top-0 z-30"
+  class="navbar bg-gradient-to-r from-gray-800 via-sky-900 border-b-2 to-sky-700"
   id="nav_height"
 >
   <div class="navbar-start">
     <div class="dropdown">
-      <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-      <!-- svelte-ignore a11y-label-has-associated-control -->
       <label tabindex="0" class="btn btn-ghost lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -77,64 +81,49 @@
           /></svg
         >
       </label>
-      <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
       <ul
         tabindex="0"
-        class="  menu menu-compact dropdown-content mt-6 p-2 shadow bg-base-100 rounded-box w-52"
+        class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
       >
-        <!-- Phone -->
-        <li><a href="/">Home</a></li>
-        <li><a href="/components">Components</a></li>
-        <li><a href="/about">About Us</a></li>
+        <li><a>Item 1</a></li>
+        <li>
+          <a>Parent</a>
+          <ul class="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </li>
+        <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a class="btn btn-ghost normal-case text-xl" href="/">
-      <img src={data.imgSrc} width="45" alt="" />
-      <span class="px-2 text-2xl text-sky-500 font-bold">{data.title}</span></a
+    <a class="btn btn-ghost normal-case text-xl text-sky-400 font-bold"
+      >{data.title}</a
     >
   </div>
   <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <!-- Laptop -->
-      {#each data.navs as nav}
-        {#if nav.isLarge == true}
-          <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+    <ul class="menu menu-horizontal px-1 z-20">
+      {#each data.navs as item}
+        {#if item.isLarge}
           <li tabindex="0">
-            <!-- svelte-ignore a11y-missing-attribute -->
-            <a href={nav.link}>
-              {nav.nv}
-              <svg
-                class="fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                ><path
-                  d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-                /></svg
-              >
-            </a>
-            <ul>
-              <div class=" flex flex-row mt-4 bg-base-200 p-2 rounded-xl border-2 ">
-                <ul class="p-2 bg-base-200">
-                  {#each nav.smallnvs as smallnv}
-                    <li><a href={smallnv.link} class="p-3 hover:text-sky-500">{smallnv.nv}</a></li>
-                  {/each}
-                </ul>
-                <div class="divider divider-horizontal lg:divider-horizontal" />
-                <ul class="p-2 bg-base-200">
-                  {#each nav.smallnvs2 as smallnv}
-                    <li><a href={smallnv.link} class="p-3 hover:text-sky-500">{smallnv.nv}</a></li>
-                  {/each}
-                </ul>
-              </div>
-            </ul>
+            <details bind:open={mint}>
+              <summary>{item.nv}</summary>
+              <ul class="p-2 border-2 bg_col">
+                {#each item.smallnvs as snv}
+                  <li>
+                    <a
+                      href={snv.link}
+                      on:click={() => {
+                        mint = false;
+                      }}>{snv.nv}</a
+                    >
+                  </li>
+                {/each}
+              </ul>
+            </details>
           </li>
         {:else}
           <li>
-            <a href={nav.link} class="mx-1" class:act={RouteId == nav.link}
-              >{nav.nv}</a
-            >
+            <a href={item.link} class:act={RouteId === item.link}>{item.nv}</a>
           </li>
         {/if}
       {/each}
@@ -142,12 +131,21 @@
   </div>
 </div>
 <slot />
+
 <!-- Hello maintain -->
 
 <style lang="postcss">
+  .bg_col {
+    background: #022e4bc8;
+  }
+  ul > li {
+    font-size: 1rem;
+    color: rgb(235, 233, 233);
+  }
   .act {
     color: rgb(17, 170, 252);
     background: #46617dc4;
+    border-radius: 4px;
   }
   #nav_height {
     min-height: 60px;
